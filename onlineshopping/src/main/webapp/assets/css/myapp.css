@@ -1,11 +1,28 @@
-
-
-body {
-  padding-top: 54px;
+@media ( min-width : 992px) {
+	body {
+		padding-top: 56px;
+	}
 }
 
-@media (min-width: 992px) {
-  body {
-    padding-top: 56px;
-  }
+html, body {
+	height: 100%;
+	min-height: 100%;
+	padding-top: 54px;
+}
+
+.wrapper {
+	position: relative;
+	min-height: 100%;
+}
+
+	
+
+.footer {
+	positon: absolute;
+	bottom: 30px;
+	height: 30px;
+	
+	
+	
+	   
 }
