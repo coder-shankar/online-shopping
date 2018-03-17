@@ -1,44 +1,49 @@
 package coder.shankar.onlineshopping.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+
+import coder.shankar.shoppingbackend.dao.CategoryDAO;
 
 @Controller
 public class PageController {
+	
+	
+	@Autowired
+	private CategoryDAO categoryDAO;
 
 	@RequestMapping(value = { "/", "/home", "/index" })
 	public ModelAndView index() {
 
 		ModelAndView mv = new ModelAndView("page");
 		mv.addObject("title", "Home");
-		mv.addObject("userClickedHome",true);
+		
+		mv.addObject("categories",categoryDAO.list());
+		mv.addObject("userClickedHome", true);
 		return mv;
 
 	}
 
-	
-	@RequestMapping(value = {"/about" })
+	@RequestMapping(value = { "/about" })
 	public ModelAndView about() {
 
 		ModelAndView mv = new ModelAndView("page");
 		mv.addObject("title", "About");
-		mv.addObject("userClickedAbout",true);
+		mv.addObject("userClickedAbout", true);
 		return mv;
 
 	}
-	
-	@RequestMapping(value = {"/contact" })
+
+	@RequestMapping(value = { "/contact" })
 	public ModelAndView contact() {
 
 		ModelAndView mv = new ModelAndView("page");
 		mv.addObject("title", "Contact");
-		mv.addObject("userClickedContact",true);
+		mv.addObject("userClickedContact", true);
 		return mv;
 
 	}
-
 
 }

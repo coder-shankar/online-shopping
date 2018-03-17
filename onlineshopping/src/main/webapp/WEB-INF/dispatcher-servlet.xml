@@ -18,6 +18,8 @@
 
 
 	<context:component-scan base-package="coder.shankar.onlineshopping.controller" />
+	<context:component-scan base-package="coder.shankar.shoppingbackend.daoimpl" />
+	
 
 
 	<bean id="viewResolver"

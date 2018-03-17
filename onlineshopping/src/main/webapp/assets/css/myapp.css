@@ -7,7 +7,7 @@
 html, body {
 	height: 100%;
 	min-height: 100%;
-	padding-top: 54px;
+
 }
 
 .wrapper {
@@ -19,9 +19,8 @@ html, body {
 
 .footer {
 	positon: absolute;
-	bottom: 30px;
-	height: 30px;
-	
+	bottom: 0px;
+
 	
 	
 	   

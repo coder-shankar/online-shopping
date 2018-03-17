@@ -14,6 +14,14 @@
 		<spring.version>4.3.7.RELEASE</spring.version>
 	</properties>
 	<dependencies>
+	
+	
+<!-- linking to backend project -->	
+<dependency>
+  <groupId>coder.shankar</groupId>
+  <artifactId>shoppingbackend</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+</dependency>
 
 
 		<!-- https://mvnrepository.com/artifact/javax/javaee-api -->
